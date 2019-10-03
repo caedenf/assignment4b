@@ -43,6 +43,7 @@
   <button type="button" onclick="submitOrder()">Order</button>
   <script>
     for (i in menu) {
+       window.alert("here");
        var name = i + "Text";
        var message = "How many " + i + "?";
        document.getElementById(name).innerHTML = message;
