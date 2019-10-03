@@ -20,12 +20,17 @@
       }
       var tax = totalCost * 0.0625;
       var totalCost = totalCost * 1.0625;
-      window.alert(order["hotdogs"] + " hotdogs for $" + hotdogsCost
-                  + order["fries"] + " fries for $" + friesCost
-                  + order["drinks"] + " drinks for $" + drinksCost
-                  + "Discount: " + discount
-                  + "Tax: " + tax
-                  + "Final cost: " + totalCost);
+      var message = "";
+      if (order["hotdogs"] > 0) {
+          message += order["hotdogs"] + " hotdogs for $" + hotdogsCost + "\n";
+      }
+      if (order["fries"] > 0) {
+          message += order["fries"] + " fries for $" + friesCost + "\n";
+      }
+      if (order["drinks"] > 0) {
+          message += order["drinks"] + " drinks for $" + drinksCost + "\n";
+      }
+      window.alert(message + "Discount: " + discount + "\n" + "Tax: " + tax + "\n" + "Final cost: $" + totalCost);
     }
   </script>
 </head>
@@ -44,7 +49,7 @@
        for (i in menu) {
        var name = i + "Text";
        var message = "How many " + i + "?";
-       console.log("here6");
+       console.log("here7");
        document.getElementById(name).innerHTML = message;
      }
   </script>
