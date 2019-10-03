@@ -5,17 +5,6 @@
     var menu = {"hotdogs": 3.25, "fries": 2, "drinks": 1.5}; 
     var order = {"hotdogs": 0, "fries": 0, "drinks": 0}; 
     
-    function initializePage() {
-    for (i in menu) {
-       var name = i + "Text";
-       var message = "How many " + i + "?";
-       console.log("here4");
-       document.getElementById(hotdogsText).innerHTML = message;
-     }
-    }
-    
-    window.onload = initializePage();
-    
     function submitOrder() {
       order[hotdogs] = parseInt(document.forms[0].elements[0].value); 
       order[fries] = parseInt(document.forms[0].elements[1].value); 
@@ -51,5 +40,13 @@
     <p id="drinksText"> </p>
     <input type="text" name="drinksNum"><br />
   </form>
+  <script>
+       for (i in menu) {
+       var name = i + "Text";
+       var message = "How many " + i + "?";
+       console.log("here4");
+       document.getElementById(name).innerHTML = message;
+     }
+  </script>
   <button type="button" onclick="submitOrder()">Order</button>
 </body>
