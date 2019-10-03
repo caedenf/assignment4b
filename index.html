@@ -10,8 +10,18 @@
   <h1>Joe's Hotdog Stand</h1>
   <h4>Fill out an order below</h4>
   <form>
-    for (i in menu) {
-      How many 
-     }
+    <p id="hotdogsText"></p>
+    <input type="text" name="hotdogsNum"><br />
+    <p id="friesText"></p>
+    <input type="text" name="triesNum"><br />
+    <p id="drinksText"></p>
+    <input type="text" name="drinksNum"><br />
   </form>
+  <script>
+    for (i in menu) {
+       var name = i + "Text";
+       var message = "How many " + i + "?";
+       document.getElementById(name).innerHTML = message;
+     }
+  </script>
 </body>
