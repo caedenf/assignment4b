@@ -5,12 +5,16 @@
     var menu = {"hotdogs": 3.25, "fries": 2, "drinks": 1.5}; 
     var order = {"hotdogs": 0, "fries": 0, "drinks": 0}; 
     
+    function initializePage() {
     for (i in menu) {
        var name = i + "Text";
        var message = "How many " + i + "?";
        console.log("here3");
        document.getElementById(hotdogsText).innerHTML = message;
      }
+    }
+    
+    window.onload = initializePage();
     
     function submitOrder() {
       order[hotdogs] = parseInt(document.forms[0].elements[0].value); 
