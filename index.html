@@ -6,12 +6,12 @@
     var order = {"hotdogs": 0, "fries": 0, "drinks": 0}; 
     
     function submitOrder() {
-      order[hotdogs] = parseInt(document.forms[0].elements[0].value); 
-      order[fries] = parseInt(document.forms[0].elements[1].value); 
-      order[drinks] = parseInt(document.forms[0].elements[2].value); 
-      var hotdogsCost = (order[hotdogs] * menu[hotdogs]);
-      var friesCost = (order[fries] * menu[fries]);
-      var drinksCost = (order[drinks] * menu[drinks]);
+      order["hotdogs"] = parseInt(document.forms[0].elements[0].value); 
+      order["fries"] = parseInt(document.forms[0].elements[1].value); 
+      order["drinks"] = parseInt(document.forms[0].elements[2].value); 
+      var hotdogsCost = (order["hotdogs"] * menu["hotdogs"]);
+      var friesCost = (order["fries"] * menu["fries"]);
+      var drinksCost = (order["drinks"] * menu["drinks"]);
       var totalCost = hotdogsCost + friesCost + drinksCost;
       var discount = 0;
       if (cost >= 20) {
@@ -20,9 +20,9 @@
       }
       var tax = totalCost * 0.0625;
       var totalCost = totalCost * 1.0625;
-      window.alert(order[hotdogs] + " hotdogs for $" + hotdogsCost
-                  + order[fries] + " fries for $" + friesCost
-                  + order[drinks] + " drinks for $" + drinksCost
+      window.alert(order["hotdogs"] + " hotdogs for $" + hotdogsCost
+                  + order["fries"] + " fries for $" + friesCost
+                  + order["drinks"] + " drinks for $" + drinksCost
                   + "Discount: " + discount
                   + "Tax: " + tax
                   + "Final cost: " + totalCost);
@@ -44,7 +44,7 @@
        for (i in menu) {
        var name = i + "Text";
        var message = "How many " + i + "?";
-       console.log("here5");
+       console.log("here6");
        document.getElementById(name).innerHTML = message;
      }
   </script>
