@@ -8,7 +8,7 @@
     for (i in menu) {
        var name = i + "Text";
        var message = "How many " + i + "?";
-       console.log("here");
+       console.log("here2");
        document.getElementById(name).innerHTML = message;
      }
     
@@ -40,11 +40,11 @@
   <h1>Joe's Hotdog Stand</h1>
   <h4>Fill out an order below</h4>
   <form>
-    <p id="hotdogsText"></p>
+    <p id="hotdogsText"> </p>
     <input type="text" name="hotdogsNum"><br />
-    <p id="friesText"></p>
+    <p id="friesText"> </p>
     <input type="text" name="triesNum"><br />
-    <p id="drinksText"></p>
+    <p id="drinksText"> </p>
     <input type="text" name="drinksNum"><br />
   </form>
   <button type="button" onclick="submitOrder()">Order</button>
