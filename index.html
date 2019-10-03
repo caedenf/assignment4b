@@ -14,7 +14,7 @@
       var drinksCost = (order["drinks"] * menu["drinks"]);
       var totalCost = hotdogsCost + friesCost + drinksCost;
       var discount = 0;
-      if (cost >= 20) {
+      if (totalCost >= 20) {
         discount = totalCost * 0.1;
         totalCost = totalCost * 0.9; 
       }
