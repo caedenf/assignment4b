@@ -13,6 +13,7 @@
       var friesCost = (order["fries"] * menu["fries"]);
       var drinksCost = (order["drinks"] * menu["drinks"]);
       var totalCost = hotdogsCost + friesCost + drinksCost;
+      var unmodCost = totalCost;
       var discount = 0;
       if (totalCost >= 20) {
         discount = totalCost * 0.1;
@@ -30,7 +31,7 @@
       if (order["drinks"] > 0) {
           message += order["drinks"] + " drinks for $" + drinksCost + "\n";
       }
-      window.alert(message + "Discount: " + discount + "\n" + "Tax: " + tax + "\n" + "Final cost: $" + totalCost);
+      window.alert(message + "Before discount and tax: $" + unmodCost + "\n" + "Discount: $" + discount.toFixed(2) + "\n" + "Tax: $" + tax.toFixed(2) + "\n" + "Final cost: $" + totalCost.toFixed(2));
     }
   </script>
 </head>
@@ -49,7 +50,7 @@
        for (i in menu) {
        var name = i + "Text";
        var message = "How many " + i + "?";
-       console.log("here7");
+       console.log("here8");
        document.getElementById(name).innerHTML = message;
      }
   </script>
